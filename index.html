@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>totari 사진공유 페이지</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* HERO 스타일 */
+    .hero {
+      position: relative;
+      background: url('https://images.pexels.com/photos/414171/pexels-photo-414171.jpeg') center/cover no-repeat;
+      background-color: #111;
+      color: #fff;
+      height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.6);
+    }
+    .hero .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* 카드 섹션 여백 */
+    .card-section {
+      padding: 4rem 0;
+    }
+
+    /* 카드 기본 스타일 & 부드러운 확대 효과 */
+    .card {
+      position: relative;
+      border: none;
+      border-radius: 0.75rem;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+    }
+
+    /* 카드 이미지 크기 동일하게, 자르기 */
+    .card-img-top {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    .card:hover .card-img-top {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO 섹션 -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="display-4">totari 사진공유 페이지</h1>
+      <p class="lead">사진을 공유합니다</p>
+      <a href="#cards" class="btn btn-outline-light btn-lg mt-3">카드 보기</a>
+    </div>
+  </section>
+
+  <!-- 카드 섹션 -->
+  <section id="cards" class="card-section container">
+    <div class="row g-4">
+      <!-- 카드 1 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card">
+          <img src="https://images.pexels.com/photos/414171/pexels-photo-414171.jpeg" class="card-img-top" alt="산속 풍경">
+          <div class="card-body">
+            <h5 class="card-title">숨겨진 산속 풍경</h5>
+            <h6 class="card-subtitle mb-2 text-muted">자연 사진</h6>
+            <p class="card-text">고요한 산속 풍경을 담은 사진입니다.</p>
+          </div>
+        </div>
+      </div>
+      <!-- 카드 2 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card">
+          <img src="https://images.pexels.com/photos/2486168/pexels-photo-2486168.jpeg" class="card-img-top" alt="도시 야경">
+          <div class="card-body">
+            <h5 class="card-title">도시의 야경</h5>
+            <h6 class="card-subtitle mb-2 text-muted">도시 사진</h6>
+            <p class="card-text">반짝이는 도시 야경을 담은 사진입니다.</p>
+          </div>
+        </div>
+      </div>
+      <!-- 카드 3 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card">
+          <img src="https://images.pexels.com/photos/210186/pexels-photo-210186.jpeg" class="card-img-top" alt="해변 일출">
+          <div class="card-body">
+            <h5 class="card-title">해변의 일출</h5>
+            <h6 class="card-subtitle mb-2 text-muted">해변 사진</h6>
+            <p class="card-text">황홀한 해변의 일출을 담은 사진입니다.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bootstrap JS (옵션) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
